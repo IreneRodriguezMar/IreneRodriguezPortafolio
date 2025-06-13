@@ -1,0 +1,133 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #0fe955;
+  height: 80px;
+  z-index: 999;
+  transition: none !important;
+
+  h1 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+    z-index: 1001;
+
+    span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: white;
+      border-radius: 4px;
+      transition: all 0.3s ease-in-out;
+      transform-origin: center;
+      margin: 3px 0;
+    }
+
+    &.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    &.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .nav-links {
+    ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+
+      li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+
+        &:hover {
+          color: #ff6422;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      transform: translateY(-10px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      padding: 1.5rem 2rem;
+
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        li a {
+          font-size: 1.1rem;
+          color: white;
+        }
+      }
+
+      &.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: block !important;
+  }
+}
