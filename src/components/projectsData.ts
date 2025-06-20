@@ -1,7 +1,7 @@
 import elUniversal from "../assets/el-universal.png";
 import nissan from "../assets/nissan-mx.jpg";
 import tommy from "../assets/tommy-mx.jpg";
-import guess from "../assets/guess.png";
+import dedinero from "../assets/logo-dedinero.png";
 import dashboard from "../assets/to-do.jpg";
 import edomex from "../assets/logo-eluniversaledomex.png";
 
@@ -10,7 +10,7 @@ export const projects = [
     title: "Refactorización de Portales de El Universal",
     description: "Mejoré el rendimiento web y accesibilidad de múltiples sitios de El Universal mediante refactorización de código legacy en React y ARC Publishing.",
     tech: ["React", "Sass", "CLS", "LCP", "SEO técnico", "ARC Publishing", "Métricas Lighthouse"],
-    link: "https://www.eluniversaledomex.com.mx",
+    link: "https://www.eluniversal.com.mx",
     image: elUniversal
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
     description: "Implementación de componentes reutilizables en React JS para portales editoriales como ViveUSA, De10, Clase.",
     tech: ["React", "Sass", "UX Design", "ARC Publishing", "Métricas Lighthouse", "SEO técnico"],
     link: "https://www.dedinero.com.mx",
-    image: guess
+    image: dedinero
   },
   {
     title: "Optimización WPO y Core Web Vitals",
